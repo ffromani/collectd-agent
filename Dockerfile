@@ -8,4 +8,4 @@ RUN \
     collectd collectd-virt collectd-write_prometheus && \
   dnf clean all
 
-ENTRYPOINT ["/usr/sbin/collectd"]
+ENTRYPOINT ["/usr/sbin/collectd", "-f"]
