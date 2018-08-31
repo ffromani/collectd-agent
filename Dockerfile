@@ -8,4 +8,6 @@ RUN \
     collectd collectd-virt collectd-write_prometheus && \
   dnf clean all
 
+COPY config/collectd.conf /etc/collectd.conf
+
 ENTRYPOINT ["/usr/sbin/collectd", "-f"]
